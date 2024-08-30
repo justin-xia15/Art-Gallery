@@ -1,0 +1,20 @@
+doctype html 
+html(lang="en")
+    head 
+        style   
+            include ../../css/home.css
+        title Home 
+    body 
+    h1.welcome Welcome to the Art Gallery!
+    div#register 
+        h2.hometext Register
+        form
+            input.homeinput(type="text" id="username" placeholder="Username") 
+            br
+            input.homeinput(type="password" id="password" placeholder="Password") 
+            br
+            div#errors
+            button.hometext#homebtn(type="button") Sign Up
+
+    script 
+        include ../../js/register.js

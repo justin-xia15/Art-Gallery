@@ -1,0 +1,11 @@
+doctype html 
+html(lang="en")
+    head 
+        title Following
+    body(style="background-color: #F4EAD5") 
+        include ../partials/header.pug
+        h1 Your followed artists:
+        ul 
+            each artist in followed 
+                li 
+                    a(href="/artists/" + artist.username) #{artist.username}

@@ -1,0 +1,24 @@
+doctype html 
+html(lang="en")
+    head 
+        title #{artistInfo.username}
+    body(style="background-color: #F4EAD5") 
+        include ../partials/header.pug 
+        h1 #{artistInfo.username}
+        button#follow(type="button") Follow ❤️
+        button#unfollow(type="button") Unfollow 💔
+        h2 #{artistInfo.username}'s artwork: 
+        ul 
+            each artwork in art
+                li 
+                    a(href="/artworks/" + artwork._id) #{artwork.name}
+
+        h2 #{artistInfo.username}'s workshops:
+        ul 
+            each workshop in workshops
+                li
+                    a(href="/workshops/" + workshop._id) #{workshop.name}
+                    
+
+    script  
+        include ../../js/artist.js

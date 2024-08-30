@@ -1,0 +1,25 @@
+doctype html 
+html(lang="en")
+    head 
+        title My Account 
+    body(style="background-color: #F4EAD5") 
+        include ../partials/header.pug
+        h1 Account info
+        p#username Username: #{user.username}
+        p Password: #{user.password}
+        p Account type: #{user.account}
+        button#switch(type="button") Switch Account Type
+        h2 Liked Artworks: 
+        ul 
+            each artwork in liked 
+                li 
+                    a#artlink(style="margin-right: 20px" href="/artworks/" + artwork._id) #{artwork.name}
+        h2 My Reviews: 
+        each review in user.reviews 
+            div(style="margin-bottom: 30px") 
+                a(href="/artworks/" + review.artwork._id) #{review.artwork.name}
+                p #{review.text}
+                //- button.remove(type="button") Remove review 
+                
+        script 
+            include ../../js/account.js

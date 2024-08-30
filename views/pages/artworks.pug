@@ -1,0 +1,23 @@
+doctype html 
+html(lang="en")
+    head 
+        title Artworks
+    body(style="background-color: #F4EAD5") 
+        include ../partials/header.pug 
+        h1 Search for Artwork
+        label(for="name") Name: 
+        input(type="text" id="name") 
+        br
+        label(for="artist") Arist name: 
+        input(type="text" id="artist") 
+        br
+        label(for="category") Category: 
+        input(type="text" id="category") 
+        br
+        button#search(type="button") Search
+
+        div#results
+
+    script  
+        include ../../js/artworks.js
+

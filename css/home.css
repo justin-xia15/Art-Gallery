@@ -1,0 +1,50 @@
+body {
+    background-color: #F4EAD5;
+
+}
+
+h2 {
+    padding-top: 50px;
+}
+
+#register {
+    background-color: #2B3A55;
+    color: black;
+    height: 400px;
+    width: 400px;
+    margin-left: 35%;
+    text-align: center;
+}
+
+/* #logout {
+    margin-left: 95%;
+} */
+
+.welcome {
+    color: #2B3A55;
+    margin-left: 35%;
+    margin-top: 5%;
+}
+
+.homeinput {
+    width: 300px;
+    height: 25px;
+    margin-bottom: 15px;
+}
+
+#homebtn {
+    background-color: #F06292;
+    border-radius: 8px;
+    margin-top: 10px;
+    height: 40px;
+    width: 300px;
+}
+
+.signup {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.hometext {
+    color: white;
+}

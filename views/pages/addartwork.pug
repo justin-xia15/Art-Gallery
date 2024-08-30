@@ -1,0 +1,29 @@
+doctype html 
+html(lang="en")
+    head 
+        title Add Artwork 
+    body(style="background-color: #F4EAD5") 
+        include ../partials/header.pug
+        h1 Add Artwork to the Gallery
+        label(for="name") Name: 
+        input(type="text" id="name")
+        br 
+        label(for="year") Year: 
+        input(type="text" id="year")
+        br 
+        label(for="category") Category: 
+        input(type="text" id="category")
+        br 
+        label(for="medium") Medium: 
+        input(type="text" id="medium")
+        br 
+        label(for="description") Description: 
+        input(type="text" id="description")
+        br
+        label(for="image") Image: 
+        input(type="text" id="image")
+        br 
+        button#submit(type="button") Submit
+
+    script 
+        include ../../js/addartwork.js

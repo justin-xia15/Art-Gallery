@@ -1,0 +1,14 @@
+doctype html 
+html(lang="en")
+    head 
+        title Add Artwork 
+    body(style="background-color: #F4EAD5") 
+        include ../partials/header.pug
+        h1 Add a Workshop 
+        label(for="name") Workshop name: 
+        input(type="text" id="name")
+        br
+        button#submit(type="button") Submit
+
+    script 
+        include ../../js/addworkshop.js

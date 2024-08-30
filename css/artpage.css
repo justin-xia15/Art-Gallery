@@ -1,0 +1,17 @@
+body {
+    background-color: #F4EAD5;
+}
+
+img {
+    height: 35%;
+    width: 35%;
+}
+
+#review {
+    height: 100px;
+    width:  500px;
+}
+
+#userReview {
+    margin-bottom: 30px;
+}

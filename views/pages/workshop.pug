@@ -1,0 +1,16 @@
+doctype html 
+html(lang="en")
+    head 
+        title 
+    body(style="background-color: #F4EAD5") 
+        include ../partials/header.pug 
+        h1 #{workshop.name} 
+        h2 Instructor: #{workshop.instructor}
+        button#enroll(type="button") Enroll
+        h2 Registered users:
+        ul
+            each person in workshop.registered
+                li #{person}
+
+    script  
+        include ../../js/workshop.js

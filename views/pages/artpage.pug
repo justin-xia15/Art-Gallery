@@ -1,0 +1,32 @@
+doctype html 
+html(lang="en")
+    head 
+        style 
+            include ../../css/artpage.css
+        title #{artwork.name}
+    body 
+        include ../partials/header.pug 
+        h1 #{artwork.name}
+             button#like(type="button" style="margin-left: 15px") Like👍
+             button#unlike(type="button" style="margin-left: 15px") Remove Like👎
+        img(src=artwork.image)
+        p Artist: 
+            a(href="/artists/" + artwork.artist) #{artwork.artist}
+        p Likes: #{artwork.likes} 
+        p Year: #{artwork.year} 
+        p Category: #{artwork.category} 
+        p Medium: #{artwork.medium} 
+        p Description: #{artwork.description}
+        h2 Reviews: 
+        each review in artwork.reviews 
+            div#userReview
+                p #{review.text}
+                p - #{review.reviewer.username}
+
+        h2 Leave a review: 
+        textarea#review
+        br
+        button#submit(type="button") Submit
+
+    script 
+        include ../../js/artpage.js

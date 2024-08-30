@@ -1,0 +1,30 @@
+doctype html 
+html(lang="en")
+    head 
+        style   
+            include ../../css/home.css
+        title Home 
+    body 
+        if session.loggedin === true
+            include ../partials/header.pug
+            h1 Welome to the Art Gallery #{session.username}!
+            //- button#logout(type="button") Log out
+
+            //- script 
+            //-     include ../../js/userhome.js
+        else
+            h1.welcome Welcome to the Art Gallery!
+            div#register 
+                h2.hometext Log in
+                form
+                    input.homeinput(type="text" id="username" placeholder="Username") 
+                    br
+                    input.homeinput(type="password" id="password" placeholder="Password") 
+                    br
+                    button.hometext#homebtn(type="button") Log in
+                    br
+                    p.signup.hometext Don't have an account yet? 
+                    a.hometext(href="/register") Sign up
+
+            script 
+                include ../../js/login.js 
